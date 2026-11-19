@@ -39,12 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Testimonials Carousel (10 slides)
+  // Testimonials Carousel — strictly 1 testimony at a time
   const track = document.getElementById("carouselTrack");
   const viewport = document.getElementById("carouselViewport");
   const prevBtn = document.getElementById("prevSlide");
   const nextBtn = document.getElementById("nextSlide");
   const dotsWrap = document.getElementById("carouselDots");
+  const counterEl = document.getElementById("carouselCounter");
 
   if (track && viewport && prevBtn && nextBtn && dotsWrap) {
     const slides = Array.from(track.children);
@@ -52,22 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
     let autoTimer = null;
 
-    const getVisibleCount = () => {
-      if (window.innerWidth <= 640) return 1;
-      if (window.innerWidth <= 960) return 2;
-      return 3;
-    };
-
-    const getMaxIndex = () => Math.max(0, totalSlides - getVisibleCount());
-
     const buildDots = () => {
-      const maxIdx = getMaxIndex();
       dotsWrap.innerHTML = "";
-      for (let i = 0; i <= maxIdx; i++) {
+      for (let i = 0; i < totalSlides; i++) {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "carousel-dot" + (i === currentIndex ? " active" : "");
-        btn.setAttribute("aria-label", `Go to testimonial slide ${i + 1}`);
+        btn.setAttribute("aria-label", `Go to testimonial ${i + 1} of ${totalSlides}`);
+        btn.setAttribute("aria-pressed", String(i === currentIndex));
         btn.addEventListener("click", () => {
           goTo(i);
           restartAuto();
@@ -76,29 +69,28 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    const updateDots = () => {
+    const updateUI = () => {
       const dotButtons = Array.from(dotsWrap.children);
       dotButtons.forEach((dot, idx) => {
-        dot.classList.toggle("active", idx === currentIndex);
+        const active = idx === currentIndex;
+        dot.classList.toggle("active", active);
+        dot.setAttribute("aria-pressed", String(active));
       });
+
+      slides.forEach((slide, idx) => {
+        slide.setAttribute("aria-hidden", String(idx !== currentIndex));
+      });
+
+      if (counterEl) {
+        counterEl.textContent = `${currentIndex + 1} / ${totalSlides}`;
+      }
     };
 
     const goTo = (index) => {
-      const maxIdx = getMaxIndex();
-      if (index < 0) {
-        currentIndex = maxIdx;
-      } else if (index > maxIdx) {
-        currentIndex = 0;
-      } else {
-        currentIndex = index;
-      }
-
-      const card = slides[0];
-      if (!card) return;
-      const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
-      const step = card.getBoundingClientRect().width + gap;
-      track.style.transform = `translateX(-${currentIndex * step}px)`;
-      updateDots();
+      if (totalSlides === 0) return;
+      currentIndex = ((index % totalSlides) + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateUI();
     };
 
     const startAuto = () => {
@@ -151,8 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: true });
 
     window.addEventListener("resize", () => {
-      buildDots();
-      goTo(Math.min(currentIndex, getMaxIndex()));
+      goTo(currentIndex);
     });
 
     buildDots();
