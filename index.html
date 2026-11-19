@@ -1,82 +1,106 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rhience R. Asuncion | Customer Experience &amp; General Virtual Assistant</title>
-  <meta name="description" content="Portfolio of Rhience R. Asuncion — Customer Experience Specialist &amp; General Virtual Assistant with 8+ years of omnichannel support, dispatch, CRM, and operations experience." />
+  <title>Rhience R. Asuncion | Customer Experience &amp; Virtual Assistant</title>
+  <meta name="description" content="Portfolio of Rhience R. Asuncion — Customer Experience Specialist &amp; Virtual Assistant with 8+ years of experience." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a href="#home" class="logo">
-        <span class="logo-dot"></span>
-        <span>RHIENCE<span class="accent">.VA</span></span>
+  <!-- Ambient Background Orbs -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-badge">RA</span>
+        <span class="brand-text">Rhience<span class="dot">.</span></span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+
+      <button class="burger" id="burgerBtn" type="button" aria-label="Open menu" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
       </button>
-      <nav class="nav-links" id="navLinks">
-        <a href="#about">About</a>
+
+      <nav class="nav-menu" id="navMenu">
         <a href="#services">Services</a>
-        <a href="#impact">Impact</a>
+        <a href="#results">Impact</a>
         <a href="#experience">Experience</a>
-        <a href="#tools">Tools</a>
-        <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+        <a href="#skills">Tools &amp; IT</a>
+        <a href="#contact" class="nav-cta">Let&rsquo;s Work Together</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero" id="home">
-    <div class="hero-glow"></div>
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <div class="availability-badge">
-          <span class="pulse-dot"></span>
-          <span>Available for Remote Full-Time &amp; Part-Time Roles</span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-layout">
+      <div class="hero-left">
+        <div class="pill-tag">
+          <span class="status-ring"></span>
+          Available for Remote Full-Time &amp; Part-Time Roles
         </div>
-        <h1>Hi, I’m <span class="gradient-text">Rhience R. Asuncion</span></h1>
-        <p class="hero-subtitle">Customer Experience Specialist &amp; General Virtual Assistant</p>
-        <p class="hero-description">
-          8+ years helping US, Canadian, and Australian businesses slash ticket backlogs by up to 40%, streamline inbox &amp; calendar operations, and deliver high-CSAT multichannel support across phone, live chat, and email.
+
+        <h1 class="hero-title">
+          Reliable Support That <span class="serif-italic">Lightens</span> Your Daily Load.
+        </h1>
+
+        <p class="hero-sub">
+          <strong>Rhience R. Asuncion</strong> &mdash; Customer Experience Specialist &amp; General Virtual Assistant with 8+ years serving US, Canadian, and Australian brands across omnichannel support, dispatch coordination, admin operations, and social media.
         </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">
-            <i class="fa-solid fa-paper-plane"></i> Book a Discovery Call
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-main">
+            Start a Conversation <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="https://wa.me/639124683756?text=Hi%20Rhience%2C%20I%20saw%20your%20Virtual%20Assistant%20portfolio%20and%20would%20love%20to%20connect." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
+          <a href="https://wa.me/639124683756?text=Hi%20Rhience%2C%20I%20checked%20out%20your%20portfolio%20and%20would%20love%20to%20chat." target="_blank" rel="noopener noreferrer" class="btn-soft">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
-          <a href="#experience" class="btn btn-ghost">
-            View Experience <i class="fa-solid fa-arrow-right"></i>
+          <a href="https://www.linkedin.com/in/rhience-a-81691a18b" target="_blank" rel="noopener noreferrer" class="btn-soft">
+            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
           </a>
         </div>
-        <div class="hero-meta">
-          <span><i class="fa-solid fa-location-dot"></i> Tarlac City, Philippines (PST / US Shift Ready)</span>
-          <span><i class="fa-solid fa-graduation-cap"></i> B.S. Information Technology</span>
+
+        <div class="hero-trust">
+          <div class="trust-item">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Tarlac City, PH &bull; US/Global Shift Ready</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>B.S. Information Technology</span>
+          </div>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="photo-frame">
-          <img src="assets/profile.jpg" alt="Rhience R. Asuncion - Virtual Assistant & Customer Experience Specialist" />
-          <div class="floating-card card-top">
-            <div class="fc-icon"><i class="fa-solid fa-chart-line"></i></div>
+      <div class="hero-right">
+        <div class="portrait-card">
+          <div class="portrait-img-wrap">
+            <img src="assets/profile.jpg" alt="Rhience R. Asuncion portrait" />
+          </div>
+
+          <div class="stat-float float-a">
+            <div class="stat-icon blue"><i class="fa-solid fa-envelope-circle-check"></i></div>
             <div>
-              <strong>-40% Backlog</strong>
-              <span>20,000 &rarr; 12,000 Tickets</span>
+              <strong>-40% Email Queue</strong>
+              <span>20,000 &rarr; 12,000</span>
             </div>
           </div>
-          <div class="floating-card card-bottom">
-            <div class="fc-icon accent-red"><i class="fa-solid fa-headset"></i></div>
+
+          <div class="stat-float float-b">
+            <div class="stat-icon rose"><i class="fa-solid fa-heart"></i></div>
             <div>
-              <strong>8+ Years Exp</strong>
-              <span>US, CA &amp; AU Operations</span>
+              <strong>95%+ Satisfaction</strong>
+              <span>Urgent &amp; Retail CX</span>
             </div>
           </div>
         </div>
@@ -84,393 +108,337 @@
     </div>
   </section>
 
-  <section class="metrics-strip" id="impact">
-    <div class="container metrics-grid">
-      <div class="metric-card">
-        <span class="metric-number">8+</span>
-        <span class="metric-label">Years in CX &amp; Virtual Assistance</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-number">40%</span>
-        <span class="metric-label">Email Backlog Reduction</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-number">95%+</span>
-        <span class="metric-label">Customer Satisfaction Rating</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-number">+30%</span>
-        <span class="metric-label">Social Media Engagement Lift</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="section-header-left">
-        <span class="eyebrow">Why Work With Me</span>
-        <h2>Tech-Savvy Operations Partner Who Protects Your Time &amp; Customers</h2>
-        <p>
-          With a Bachelor of Science in Information Technology from Tarlac State University and over eight years supporting fast-paced e-commerce, legal, roadside dispatch, and retail brands, I bridge the gap between empathetic customer care and organized back-office execution.
-        </p>
-        <p>
-          Whether clearing high-volume email queues, coordinating urgent roadside dispatch, managing executive calendars, or maintaining CRM pages, I work independently with clear communication, strict SLA discipline, and zero hand-holding.
-        </p>
-      </div>
-      <div class="highlights-box">
-        <div class="highlight-item">
-          <i class="fa-solid fa-bolt"></i>
-          <div>
-            <h4>Fast Ramp-Up &amp; Tech Fluency</h4>
-            <p>IT background (HTML, CSS, PHP, SQL) means I learn new CRMs, helpdesks, and workflows in hours, not weeks.</p>
-          </div>
-        </div>
-        <div class="highlight-item">
-          <i class="fa-solid fa-shield-halved"></i>
-          <div>
-            <h4>Calm Under Pressure</h4>
-            <p>Experienced in urgent roadside assistance dispatch, peak retail queues, and high-stakes client escalations.</p>
-          </div>
-        </div>
-        <div class="highlight-item">
-          <i class="fa-solid fa-clock"></i>
-          <div>
-            <h4>Flexible Global Coverage</h4>
-            <p>Proven track record supporting US, Canadian, and Australian time zones with reliable fiber internet and backup power.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="services">
+  <!-- Impact Strip -->
+  <section class="impact-section" id="results">
     <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">What I Do</span>
-        <h2>Core Virtual Assistant &amp; CX Services</h2>
-        <p>Tailored remote support designed to take repetitive operations off your plate.</p>
+      <div class="impact-banner">
+        <div class="impact-box">
+          <span class="big-num">8+</span>
+          <span class="big-label">Years Remote &amp; CX Experience</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-box">
+          <span class="big-num">40%</span>
+          <span class="big-label">Email Backlog Reduction</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-box">
+          <span class="big-num">35+</span>
+          <span class="big-label">Motorists Dispatched / Shift</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-box">
+          <span class="big-num">+30%</span>
+          <span class="big-label">Social Media Engagement Lift</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">How I Help</span>
+        <h2>Tailored Virtual Assistant &amp; CX Solutions</h2>
+        <p>From urgent customer care to organized daily operations, I step in seamlessly so you can focus on scaling.</p>
       </div>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+      <div class="bento-grid">
+        <div class="bento-card featured">
+          <div class="card-badge">Most Requested</div>
+          <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
           <h3>Omnichannel Customer Support</h3>
-          <p>Responsive voice, live chat, and email support handling inquiries, order modifications, refunds, escalations, and SLA-driven ticket resolution.</p>
-          <ul class="service-list">
-            <li>High-volume inbox &amp; queue reduction</li>
-            <li>Empathetic conflict resolution &amp; retention</li>
-            <li>Upselling promotions &amp; loyalty programs</li>
+          <p>Empathetic, fast, and thorough support across phone, live chat, and email—resolving order issues, processing returns/exchanges, driving upsells, and cutting ticket backlogs.</p>
+          <ul class="clean-list">
+            <li>Reduced company email volume by 40% (20,000 &rarr; 12,000)</li>
+            <li>UPS, USPS &amp; FedEx order tracking &amp; resolution</li>
+            <li>Loyalty memberships, promotions &amp; retention</li>
           </ul>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
-          <h3>Order Logistics &amp; Dispatch</h3>
-          <p>End-to-end shipment tracking and real-time service coordination to keep customers informed and operations running smoothly.</p>
-          <ul class="service-list">
-            <li>UPS, USPS &amp; FedEx carrier claims &amp; tracking</li>
-            <li>Emergency roadside dispatch &amp; ETA updates</li>
-            <li>Policy coverage &amp; eligibility verification</li>
+        <div class="bento-card">
+          <div class="icon-box"><i class="fa-solid fa-car-burst"></i></div>
+          <h3>Roadside &amp; Dispatch Coordination</h3>
+          <p>Calm, accurate real-time coordination for urgent roadside and towing requests—verifying coverage, updating ETAs, and keeping policyholders informed.</p>
+          <ul class="clean-list">
+            <li>35+ stranded motorists coordinated per shift</li>
+            <li>100% coverage &amp; eligibility verification</li>
+            <li>20% faster average dispatch coordination</li>
           </ul>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-calendar-check"></i></div>
-          <h3>Executive &amp; Admin Assistance</h3>
-          <p>Reliable day-to-day administrative management so founders, attorneys, and teams stay focused on growth.</p>
-          <ul class="service-list">
-            <li>Calendar scheduling &amp; inbox management</li>
-            <li>Client invoicing, travel booking &amp; meeting notes</li>
-            <li>Webinar registrations &amp; database upkeep</li>
+        <div class="bento-card">
+          <div class="icon-box"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3>Executive &amp; Admin Operations</h3>
+          <p>Structured day-to-day administrative support for founders, teams, and law/sports brand operations—keeping schedules, inboxes, and records spotless.</p>
+          <ul class="clean-list">
+            <li>Calendar management, travel &amp; meeting notes</li>
+            <li>Client invoicing, webinar signups &amp; databases</li>
+            <li>Google Workspace &amp; Microsoft Office mastery</li>
           </ul>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
-          <h3>CRM, Content &amp; Social Media</h3>
-          <p>Consistent digital presence and clean CRM pages backed by measurable engagement growth.</p>
-          <ul class="service-list">
-            <li>Facebook scheduling &amp; audience engagement</li>
+        <div class="bento-card">
+          <div class="icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Social Media, CRM &amp; Creative</h3>
+          <p>Engaging social content and clean funnel/website edits designed to keep your brand visible and converting.</p>
+          <ul class="clean-list">
+            <li>20+ weekly Facebook posts (+30% engagement)</li>
             <li>Canva &amp; Photoshop promotional graphics</li>
-            <li>Kartra CRM website edits &amp; email campaigns</li>
+            <li>Kartra CRM website edits &amp; email drafts</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="experience">
+  <!-- Experience Section -->
+  <section class="section section-tinted" id="experience">
     <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Career Track Record</span>
-        <h2>Work Experience</h2>
-        <p>8+ years of verified results across customer experience, operations, and virtual assistance.</p>
+      <div class="section-heading">
+        <span class="kicker">Proven Track Record</span>
+        <h2>Experience &amp; Career Journey</h2>
+        <p>Filter by specialty to explore how I&rsquo;ve delivered measurable results across roles.</p>
       </div>
 
-      <div class="filter-tabs" role="tablist">
-        <button class="filter-btn active" data-filter="all">All Roles (8)</button>
-        <button class="filter-btn" data-filter="cx">Customer Support &amp; Dispatch</button>
-        <button class="filter-btn" data-filter="va">Virtual Assistant &amp; Marketing</button>
+      <div class="tab-bar">
+        <button class="tab-pill active" type="button" data-filter="all">All Experience</button>
+        <button class="tab-pill" type="button" data-filter="support">Support &amp; Dispatch</button>
+        <button class="tab-pill" type="button" data-filter="va">VA &amp; Social Media</button>
       </div>
 
-      <div class="timeline">
-        <article class="timeline-item" data-category="cx">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <div>
-                <h3>Roadside &amp; Towing Insurance Support Specialist</h3>
-                <span class="company">Private Client Engagement &bull; Remote</span>
-              </div>
-              <span class="date-badge">Apr 20, 2024 &ndash; May 20, 2024</span>
-            </div>
-            <ul>
-              <li>Coordinated real-time inbound towing and roadside assistance dispatch for <strong>35+ stranded motorists per shift</strong> for a major US auto insurance operation.</li>
-              <li>Verified policy coverage, vehicle details, and service eligibility with <strong>100% accuracy</strong>, cutting average dispatch coordination time by <strong>20%</strong>.</li>
-              <li>Communicated live tow ETAs to policyholders and providers, maintaining a <strong>95%+ satisfaction score</strong> in urgent situations.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item" data-category="cx">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <div>
-                <h3>Phone, Chat, and Email Support Specialist</h3>
-                <span class="company">Intelegencia (New York &amp; Company / Fashion to Figure)</span>
-              </div>
-              <span class="date-badge">Nov 23, 2022 &ndash; Mar 14, 2024</span>
-            </div>
-            <ul>
-              <li>Helped reduce pending customer email volume by <strong>40% (from 20,000 to 12,000 emails)</strong> via structured workflows and timely resolution.</li>
-              <li>Resolved multichannel inquiries across phone, chat, and email covering orders, returns, exchanges, and account management.</li>
-              <li>Coordinated shipment tracking and carrier follow-ups across <strong>UPS, USPS, and FedEx</strong>.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item" data-category="va">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <div>
-                <h3>Virtual Assistant (VA)</h3>
-                <span class="company">The SL DeBarros Law Firm, LLC</span>
-              </div>
-              <span class="date-badge">Oct 12, 2022 &ndash; Jan 5, 2023</span>
-            </div>
-            <ul>
-              <li>Provided remote executive administrative support and content management across <strong>two sports brands</strong>.</li>
-              <li>Managed client scheduling, email correspondence, calendar coordination, webinar registrations, and invoice submissions.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item" data-category="va">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <div>
-                <h3>Freelance Virtual Assistant</h3>
-                <span class="company">IenceAssist VA Services</span>
-              </div>
-              <span class="date-badge">Jun 2022 &ndash; Jan 2023</span>
-            </div>
-            <ul>
-              <li>Designed promotional visuals using <strong>Canva and Photoshop</strong>, edited web pages in <strong>Kartra CRM</strong>, and drafted client email campaigns.</li>
-              <li>Managed calendars, meeting notes, and client deliverables prior to transitioning full-time to Intelegencia.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item" data-category="cx">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <div>
-                <h3>Customer Service Representative (Voice &amp; Chat)</h3>
-                <span class="company">Sitel (Macy&rsquo;s &amp; Staples.com)</span>
-              </div>
-              <span class="date-badge">Sep 2017 &ndash; Jan 2022</span>
-            </div>
-            <ul>
-              <li>Delivered high-volume phone and live chat support for major US retail and e-commerce brands over 4+ years.</li>
-              <li>Processed orders, replacements, returns, and promoted loyalty memberships and seasonal offers.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item" data-category="va">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <div>
-                <h3>Social Media Manager (Part-Time)</h3>
-                <span class="company">Sourced</span>
-              </div>
-              <span class="date-badge">Mar 2021 &ndash; Nov 2021</span>
-            </div>
-            <ul>
-              <li>Curated and scheduled <strong>20+ Facebook posts weekly</strong> aligned with peak audience engagement windows.</li>
-              <li>Drove a <strong>30% lift in overall post engagement</strong>, <strong>23% increase in social shares</strong>, and <strong>20% timing engagement boost</strong>.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item" data-category="va">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <div>
-                <h3>Virtual Assistant (Part-Time)</h3>
-                <span class="company">Online Resource Inc.</span>
-              </div>
-              <span class="date-badge">Nov 2018 &ndash; Jul 2019</span>
-            </div>
-            <ul>
-              <li>Maintained contact databases, updated spreadsheets, coordinated travel bookings, and scheduled meetings.</li>
-              <li>Conducted market research and handled client/team inquiries via email and phone.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item" data-category="va">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <div>
-                <h3>Data &amp; Administrative Intern</h3>
-                <span class="company">Tarlac City Hall</span>
-              </div>
-              <span class="date-badge">Feb 2016 &ndash; May 2016</span>
-            </div>
-            <ul>
-              <li>Entered departmental records and organized physical and digital documentation across municipal offices.</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="tools">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Capabilities &amp; Background</span>
-        <h2>Tools, Tech Stack &amp; Education</h2>
-      </div>
-
-      <div class="tools-edu-grid">
-        <div class="tools-panel">
-          <h3><i class="fa-solid fa-toolbox"></i> Software &amp; Platforms</h3>
-          <div class="tag-cloud">
-            <span class="skill-tag">Zendesk / Helpdesks</span>
-            <span class="skill-tag">Kartra CRM</span>
-            <span class="skill-tag">Google Workspace</span>
-            <span class="skill-tag">Microsoft Office Suite</span>
-            <span class="skill-tag">UPS / USPS / FedEx Portals</span>
-            <span class="skill-tag">Canva</span>
-            <span class="skill-tag">Adobe Photoshop</span>
-            <span class="skill-tag">Facebook Business Suite</span>
-            <span class="skill-tag">Calendar &amp; Webinar Tools</span>
-            <span class="skill-tag">Invoicing &amp; Spreadsheets</span>
-            <span class="skill-tag">HTML / CSS / PHP</span>
-            <span class="skill-tag">SQL (CRUD Databases)</span>
-          </div>
-        </div>
-
-        <div class="edu-panel">
-          <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
-          <div class="edu-card">
-            <h4>Bachelor of Science in Information Technology</h4>
-            <p class="edu-school">Tarlac State University &bull; 2012 &ndash; 2016</p>
-            <ul>
-              <li><strong>Web Development:</strong> Built websites using HTML, CSS, and PHP, including a monetized side project.</li>
-              <li><strong>Database Management:</strong> Designed and implemented a SQL database system with full CRUD functionality.</li>
-              <li><strong>Computer Troubleshooting:</strong> Diagnosed and resolved hardware and software issues.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section contact-section" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-info">
-        <span class="eyebrow">Let&rsquo;s Work Together</span>
-        <h2>Ready to Streamline Your Support &amp; Daily Operations?</h2>
-        <p>
-          Send a quick message with the tasks or shift hours you need covered. I respond promptly via email, WhatsApp, or LinkedIn.
-        </p>
-
-        <div class="contact-cards">
-          <a href="mailto:asuncionrhience@gmail.com" class="contact-method">
-            <div class="cm-icon"><i class="fa-solid fa-envelope"></i></div>
+      <div class="exp-list">
+        <div class="exp-card" data-type="support">
+          <div class="exp-header">
             <div>
-              <span>Email Me</span>
+              <h3>Roadside &amp; Towing Insurance Support Specialist (Private Client)</h3>
+              <p class="exp-org">Remote Engagement</p>
+            </div>
+            <span class="exp-period">Apr 20, 2024 &ndash; May 20, 2024</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Managed real-time inbound towing and roadside assistance dispatch for <strong>35+ stranded motorists per shift</strong> for a major US auto insurance operation.</li>
+            <li>Verified policy coverage, vehicle details, and dispatch eligibility with <strong>100% accuracy</strong>, reducing average dispatch coordination time by <strong>20%</strong>.</li>
+            <li>Delivered live tow ETAs and status updates to policyholders and vendors, maintaining a <strong>95%+ satisfaction rating</strong> during urgent requests.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card" data-type="support">
+          <div class="exp-header">
+            <div>
+              <h3>Phone, Chat, and Email Support Specialist</h3>
+              <p class="exp-org">Intelegencia &bull; New York and Company / Fashion to Figure</p>
+            </div>
+            <span class="exp-period">Nov 23, 2022 &ndash; Mar 14, 2024</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Helped cut company email volume by <strong>40% (from 20,000 to 12,000 emails)</strong> through clear communication and timely issue resolution.</li>
+            <li>Assisted customers across phone, chat, and email with order concerns, returns, exchanges, and account support.</li>
+            <li>Tracked and coordinated deliveries across <strong>UPS, USPS, and FedEx</strong> for on-time visibility.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card" data-type="va">
+          <div class="exp-header">
+            <div>
+              <h3>Virtual Assistant (VA)</h3>
+              <p class="exp-org">The SL DeBarros Law Firm, LLC</p>
+            </div>
+            <span class="exp-period">Oct 12, 2022 &ndash; Jan 5, 2023</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Provided remote administrative assistance and content management supporting <strong>two sports brands</strong>.</li>
+            <li>Handled client scheduling details, email correspondence, calendar coordination, webinar registrations, and invoice submissions.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card" data-type="va">
+          <div class="exp-header">
+            <div>
+              <h3>Freelance Virtual Assistant</h3>
+              <p class="exp-org">IenceAssist VA Services</p>
+            </div>
+            <span class="exp-period">Jun 2022 &ndash; Jan 2023</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Created promotional visuals in <strong>Canva and Photoshop</strong>, edited web pages using <strong>Kartra CRM</strong>, and drafted client emails.</li>
+            <li>Managed calendars, meeting notes, and client tasks before transitioning full-time to Intelegencia.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card" data-type="support">
+          <div class="exp-header">
+            <div>
+              <h3>Customer Service Representative (Voice &amp; Chat)</h3>
+              <p class="exp-org">Sitel &bull; Macy&rsquo;s and Staples</p>
+            </div>
+            <span class="exp-period">Sep 2017 &ndash; Jan 2022</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Resolved phone and live chat inquiries promptly across major retail and e-commerce accounts.</li>
+            <li>Assisted with order placement, promotions, memberships, shipment tracking, replacements, and returns.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card" data-type="va">
+          <div class="exp-header">
+            <div>
+              <h3>Social Media Manager (Part-Time)</h3>
+              <p class="exp-org">Sourced</p>
+            </div>
+            <span class="exp-period">Mar 2021 &ndash; Nov 2021</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Curated and scheduled <strong>20+ Facebook posts weekly</strong> optimized for peak audience timing.</li>
+            <li>Achieved a <strong>30% increase in overall engagement</strong>, <strong>23% rise in social shares</strong>, and <strong>20% timing engagement lift</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card" data-type="va">
+          <div class="exp-header">
+            <div>
+              <h3>Virtual Assistant (Part-Time)</h3>
+              <p class="exp-org">Online Resource Inc.</p>
+            </div>
+            <span class="exp-period">Nov 2018 &ndash; Jul 2019</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Maintained contact databases and spreadsheets, booked travel, scheduled meetings, and conducted market research.</li>
+            <li>Handled client and team inquiries via email and phone while delivering dependable administrative support.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card" data-type="va">
+          <div class="exp-header">
+            <div>
+              <h3>Data &amp; Administrative Intern</h3>
+              <p class="exp-org">Tarlac City Hall</p>
+            </div>
+            <span class="exp-period">Feb 2016 &ndash; May 2016</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Entered data and organized physical and digital paperwork across municipal departments.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & IT Education -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">Toolkit &amp; Education</span>
+        <h2>Software Fluency &amp; IT Foundation</h2>
+        <p>Combining customer-first communication with a Bachelor of Science in Information Technology.</p>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <h3><i class="fa-solid fa-layer-group"></i> Platforms &amp; Competencies</h3>
+          <div class="chips">
+            <span class="chip">Phone, Chat &amp; Email Support</span>
+            <span class="chip">Calendar &amp; Inbox Management</span>
+            <span class="chip">Kartra CRM</span>
+            <span class="chip">Google Workspace</span>
+            <span class="chip">Microsoft Office Suite</span>
+            <span class="chip">Canva</span>
+            <span class="chip">Photoshop</span>
+            <span class="chip">Facebook Management</span>
+            <span class="chip">UPS / USPS / FedEx Tracking</span>
+            <span class="chip">Invoicing &amp; Webinar Prep</span>
+            <span class="chip">HTML, CSS &amp; PHP</span>
+            <span class="chip">SQL (CRUD Databases)</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Tarlac State University (2012 &ndash; 2016)</h3>
+          <p class="degree-title">Bachelor of Science in Information Technology</p>
+          <ul class="clean-list">
+            <li><strong>Web Development:</strong> Built websites with HTML, CSS, and PHP, including a monetized side venture.</li>
+            <li><strong>Database Management:</strong> Designed and implemented a SQL database system with CRUD operations.</li>
+            <li><strong>Computer Troubleshooting:</strong> Skilled in diagnosing and resolving hardware and software issues.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-tinted" id="contact">
+    <div class="container contact-wrap">
+      <div class="contact-left">
+        <span class="kicker">Get In Touch</span>
+        <h2>Let&rsquo;s Build a Smoother Workflow Together</h2>
+        <p>Need dependable customer support, dispatch coordination, or an organized Virtual Assistant? Reach out directly through your preferred channel.</p>
+
+        <div class="direct-links">
+          <a href="mailto:asuncionrhience@gmail.com" class="direct-row">
+            <span class="row-icon"><i class="fa-solid fa-envelope"></i></span>
+            <span>
+              <small>Email</small>
               <strong>asuncionrhience@gmail.com</strong>
-            </div>
+            </span>
           </a>
 
-          <a href="https://wa.me/639124683756" target="_blank" rel="noopener noreferrer" class="contact-method">
-            <div class="cm-icon"><i class="fa-brands fa-whatsapp"></i></div>
-            <div>
-              <span>Phone / WhatsApp</span>
+          <a href="https://wa.me/639124683756" target="_blank" rel="noopener noreferrer" class="direct-row">
+            <span class="row-icon"><i class="fa-brands fa-whatsapp"></i></span>
+            <span>
+              <small>Phone / WhatsApp</small>
               <strong>+63 912 468 3756</strong>
-            </div>
+            </span>
           </a>
 
-          <a href="https://www.linkedin.com/in/rhience-a-81691a18b" target="_blank" rel="noopener noreferrer" class="contact-method">
-            <div class="cm-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-            <div>
-              <span>LinkedIn Profile</span>
+          <a href="https://www.linkedin.com/in/rhience-a-81691a18b" target="_blank" rel="noopener noreferrer" class="direct-row">
+            <span class="row-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+            <span>
+              <small>LinkedIn</small>
               <strong>linkedin.com/in/rhience-a-81691a18b</strong>
-            </div>
+            </span>
           </a>
         </div>
       </div>
 
-      <form class="contact-form" id="contactForm">
-        <h3>Send a Direct Inquiry</h3>
-        <div class="form-group">
-          <label for="clientName">Your Name</label>
-          <input type="text" id="clientName" name="name" placeholder="Jane Doe" required />
+      <form class="inquiry-box" id="inquiryForm">
+        <h3>Quick Client Inquiry</h3>
+        <div class="field">
+          <label for="senderName">Name</label>
+          <input type="text" id="senderName" placeholder="Your name" required />
         </div>
-        <div class="form-group">
-          <label for="clientEmail">Your Email</label>
-          <input type="email" id="clientEmail" name="email" placeholder="jane@company.com" required />
+        <div class="field">
+          <label for="senderEmail">Email</label>
+          <input type="email" id="senderEmail" placeholder="you@company.com" required />
         </div>
-        <div class="form-group">
-          <label for="serviceNeeded">Role / Support Type</label>
-          <select id="serviceNeeded" name="service">
-            <option value="Omnichannel Customer Support">Omnichannel Customer Support (Phone / Chat / Email)</option>
-            <option value="General / Executive Virtual Assistant">General / Executive Virtual Assistant</option>
-            <option value="Order Logistics & Dispatch Support">Order Logistics &amp; Dispatch Support</option>
-            <option value="CRM & Social Media Management">CRM &amp; Social Media Management</option>
-            <option value="Full-Time Dedicated VA">Full-Time Dedicated VA</option>
+        <div class="field">
+          <label for="senderTopic">What do you need help with?</label>
+          <select id="senderTopic">
+            <option value="Customer Support (Phone / Chat / Email)">Customer Support (Phone / Chat / Email)</option>
+            <option value="General Virtual Assistant">General Virtual Assistant</option>
+            <option value="Roadside / Logistics & Dispatch Support">Roadside / Logistics &amp; Dispatch Support</option>
+            <option value="Social Media & CRM Management">Social Media &amp; CRM Management</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="clientMessage">Project Details or Shift Hours</label>
-          <textarea id="clientMessage" name="message" rows="4" placeholder="Tell me about your business, tools, and preferred schedule..." required></textarea>
+        <div class="field">
+          <label for="senderDetails">Message</label>
+          <textarea id="senderDetails" rows="4" placeholder="Share your role details, schedule, or questions..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">
-          <i class="fa-solid fa-paper-plane"></i> Compose Email Inquiry
+        <button type="submit" class="btn-main full-w">
+          Send via Email <i class="fa-solid fa-paper-plane"></i>
         </button>
-        <p class="form-note" id="formStatus">Opens your default email client pre-filled with your message.</p>
       </form>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>&copy; <span id="year"></span> Rhience R. Asuncion. All rights reserved.</p>
-      <div class="footer-links">
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>&copy; <span id="copyYear"></span> Rhience R. Asuncion &bull; Tarlac City, Philippines</p>
+      <div class="socials">
         <a href="mailto:asuncionrhience@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         <a href="https://wa.me/639124683756" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com/in/rhience-a-81691a18b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/rhience-a-81691a18b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
   </footer>

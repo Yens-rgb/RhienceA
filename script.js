@@ -1,57 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const yearEl = document.getElementById("year");
+  const yearEl = document.getElementById("copyYear");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
-
-  if (navToggle && navLinks) {
-    navToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
+  const burger = document.getElementById("burgerBtn");
+  const navMenu = document.getElementById("navMenu");
+  if (burger && navMenu) {
+    burger.addEventListener("click", () => {
+      const expanded = navMenu.classList.toggle("open");
+      burger.setAttribute("aria-expanded", String(expanded));
     });
 
-    navLinks.querySelectorAll("a").forEach((link) => {
+    navMenu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
+        navMenu.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
       });
     });
   }
 
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const timelineItems = document.querySelectorAll(".timeline-item");
+  const pills = document.querySelectorAll(".tab-pill");
+  const cards = document.querySelectorAll(".exp-card");
+  pills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      pills.forEach((p) => p.classList.remove("active"));
+      pill.classList.add("active");
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const filter = btn.getAttribute("data-filter");
-      timelineItems.forEach((item) => {
-        if (filter === "all" || item.getAttribute("data-category") === filter) {
-          item.classList.remove("hidden");
+      const filter = pill.getAttribute("data-filter");
+      cards.forEach((card) => {
+        const type = card.getAttribute("data-type");
+        if (filter === "all" || type === filter) {
+          card.classList.remove("is-hidden");
         } else {
-          item.classList.add("hidden");
+          card.classList.add("is-hidden");
         }
       });
     });
   });
 
-  const contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+  const form = document.getElementById("inquiryForm");
+  if (form) {
+    form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const name = document.getElementById("clientName").value.trim();
-      const email = document.getElementById("clientEmail").value.trim();
-      const service = document.getElementById("serviceNeeded").value;
-      const message = document.getElementById("clientMessage").value.trim();
+      const name = document.getElementById("senderName").value.trim();
+      const email = document.getElementById("senderEmail").value.trim();
+      const topic = document.getElementById("senderTopic").value;
+      const details = document.getElementById("senderDetails").value.trim();
 
-      const subject = encodeURIComponent(`VA Inquiry: ${service} — from ${name}`);
+      const subject = encodeURIComponent(`Client Inquiry: ${topic} — ${name}`);
       const body = encodeURIComponent(
-        `Hi Rhience,\n\nName: ${name}\nEmail: ${email}\nService Needed: ${service}\n\nDetails:\n${message}\n\nBest regards,\n${name}`
-      );
+        `Hi Rhience,
 
+Name: ${name}
+Email: ${email}
+Topic: ${topic}
+
+Message:
+${details}`
+      );
       window.location.href = `mailto:asuncionrhience@gmail.com?subject=${subject}&body=${body}`;
     });
   }
