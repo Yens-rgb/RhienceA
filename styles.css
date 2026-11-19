@@ -139,11 +139,11 @@ header, section, footer {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
 .nav-menu a {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--muted);
   transition: color 0.2s ease;
@@ -659,6 +659,135 @@ header, section, footer {
   color: var(--ink);
 }
 
+/* Testimonials Carousel */
+.carousel-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.testi-card {
+  flex: 0 0 calc((100% - 2.5rem) / 3);
+  min-width: calc((100% - 2.5rem) / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.35rem;
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.testi-card:hover {
+  border-color: rgba(56, 189, 248, 0.42);
+  transform: translateY(-3px);
+}
+
+.testi-stars {
+  display: flex;
+  gap: 0.25rem;
+  color: var(--gold);
+  font-size: 0.85rem;
+}
+
+.testi-quote {
+  font-size: 0.94rem;
+  color: #e2e8f0;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.avatar-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, var(--sky), var(--indigo));
+  flex-shrink: 0;
+}
+
+.testi-author strong {
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.carousel-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--surface-2);
+  border-color: var(--sky);
+  transform: scale(1.05);
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(148, 163, 184, 0.35);
+  cursor: pointer;
+  padding: 0;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.carousel-dot.active {
+  width: 24px;
+  background: linear-gradient(90deg, var(--sky), var(--indigo));
+}
+
 /* Two Column Skills & Education */
 .two-col {
   display: grid;
@@ -857,9 +986,14 @@ header, section, footer {
   .bento-grid {
     grid-template-columns: 1fr;
   }
+
+  .testi-card {
+    flex: 0 0 calc((100% - 1.25rem) / 2);
+    min-width: calc((100% - 1.25rem) / 2);
+  }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 780px) {
   .burger {
     display: grid;
     place-items: center;
@@ -885,5 +1019,12 @@ header, section, footer {
 
   .nav-menu a.nav-cta {
     text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .testi-card {
+    flex: 0 0 100%;
+    min-width: 100%;
   }
 }
